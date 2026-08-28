@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CareConnect – Healthcare Support</title>
+<meta name="description" content="CareConnect connects individuals with healthcare support, volunteers, and essential assistance through a simple, accessible platform." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ SKIP LINK (Accessibility) ============ -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 24" width="34" height="20">
+          <polyline points="0,12 9,12 12,4 16,20 20,12 40,12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      CareConnect
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#request">Request Support</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#request" class="btn btn-primary btn-sm">Get Help</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">CareConnect NGO Platform · Concept</p>
+        <h1>Healthcare Support, When You Need It Most</h1>
+        <p class="hero-sub">CareConnect connects individuals with healthcare support, volunteers, and essential assistance through a simple and accessible platform.</p>
+        <div class="hero-actions">
+          <a href="#request" class="btn btn-primary">Request Support</a>
+          <button class="btn btn-outline" id="askCareBotBtn" type="button">Ask CareBot 🤖</button>
+        </div>
+        <div class="hero-trust">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          Concept platform — not a substitute for emergency medical services.
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-card">
+          <div class="visual-row">
+            <div class="visual-avatar">👩‍⚕️</div>
+            <div>
+              <div class="visual-name">Support Request</div>
+              <div class="visual-tag">Status: Received</div>
+            </div>
+          </div>
+          <svg class="visual-pulse" viewBox="0 0 300 60" preserveAspectRatio="none">
+            <polyline points="0,30 40,30 55,10 70,50 85,30 300,30" fill="none" stroke="#0F8B8D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="visual-chips">
+            <span class="chip">Medical</span>
+            <span class="chip">Medicine</span>
+            <span class="chip">Mental Health</span>
+            <span class="chip">Volunteers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg class="hero-divider" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
+      <polyline points="0,20 260,20 300,4 340,36 380,20 1200,20" fill="none" stroke="#CFE6E6" stroke-width="2"/>
+    </svg>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="services" id="services">
+    <div class="section-inner">
+      <p class="eyebrow center">What We Offer</p>
+      <h2 class="section-title">Support Services</h2>
+      <p class="section-sub">CareConnect helps route your request to the right kind of assistance.</p>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">🩺</div>
+          <h3>Medical Assistance</h3>
+          <p>Get connected with healthcare support and guidance.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">💊</div>
+          <h3>Medicine Support</h3>
+          <p>Request assistance for essential medicines.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">🧠</div>
+          <h3>Mental Health Support</h3>
+          <p>Find support and guidance when you need someone to talk to.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">🤝</div>
+          <h3>Volunteer Assistance</h3>
+          <p>Connect with volunteers who can help with your needs.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REQUEST SUPPORT FORM ============ -->
+  <section class="request" id="request">
+    <div class="section-inner">
+      <p class="eyebrow center">Request Support</p>
+      <h2 class="section-title">Request Healthcare Support</h2>
+      <p class="section-sub">Fill in the form below. A CareConnect coordinator will review your request.</p>
+
+      <div class="request-grid">
+        <form class="request-form" id="requestForm" novalidate>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fullName">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="fullName" name="fullName" autocomplete="name" required minlength="2" />
+              <span class="field-error" id="err-fullName"></span>
+            </div>
+            <div class="form-field">
+              <label for="age">Age <span aria-hidden="true">*</span></label>
+              <input type="number" id="age" name="age" min="0" max="120" required />
+              <span class="field-error" id="err-age"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+              <span class="field-error" id="err-email"></span>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+              <span class="field-error" id="err-phone"></span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="location">Location <span aria-hidden="true">*</span></label>
+            <input type="text" id="location" name="location" placeholder="City, State" required />
+            <span class="field-error" id="err-location"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="supportType">Support Type <span aria-hidden="true">*</span></label>
+            <select id="supportType" name="supportType" required>
+              <option value="" disabled selected>Select support type</option>
+              <option value="Medical Assistance">Medical Assistance</option>
+              <option value="Medicine Support">Medicine Support</option>
+              <option value="Mental Health Support">Mental Health Support</option>
+              <option value="Emergency Assistance">Emergency Assistance</option>
+              <option value="Other">Other</option>
+            </select>
+            <span class="field-error" id="err-supportType"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="description">Description of Support Needed <span aria-hidden="true">*</span></label>
+            <textarea id="description" name="description" rows="4" minlength="10" required></textarea>
+            <span class="field-error" id="err-description"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="contactMethod">Preferred Contact Method <span aria-hidden="true">*</span></label>
+            <select id="contactMethod" name="contactMethod" required>
+              <option value="" disabled selected>Select contact method</option>
+              <option value="Phone Call">Phone Call</option>
+              <option value="Email">Email</option>
+              <option value="SMS / Text">SMS / Text</option>
+              <option value="WhatsApp">WhatsApp</option>
+            </select>
+            <span class="field-error" id="err-contactMethod"></span>
+          </div>
+
+          <p class="form-note">We only collect the information needed to route your request. Please avoid sharing detailed medical history here.</p>
+
+          <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+        </form>
+
+        <!-- ===== Live summary / result panel ===== -->
+        <div class="summary-panel" id="summaryPanel" aria-live="polite">
+          <div class="summary-empty" id="summaryEmpty">
+            <div class="summary-empty-icon" aria-hidden="true">📋</div>
+            <h3>Your Request Summary</h3>
+            <p>Once you submit the form, a confirmation summary with your Request ID and priority level will appear here.</p>
+          </div>
+
+          <div class="summary-result hidden" id="summaryResult">
+            <div class="summary-success">
+              <span class="summary-check" aria-hidden="true">✓</span>
+              Request Received Successfully
+            </div>
+            <dl class="summary-list">
+              <div><dt>Request ID</dt><dd id="sumId">—</dd></div>
+              <div><dt>Name</dt><dd id="sumName">—</dd></div>
+              <div><dt>Support Type</dt><dd id="sumType">—</dd></div>
+              <div><dt>Location</dt><dd id="sumLocation">—</dd></div>
+              <div><dt>Priority</dt><dd id="sumPriority">—</dd></div>
+              <div><dt>Status</dt><dd id="sumStatus">Received</dd></div>
+            </dl>
+            <p class="summary-disclaimer">This priority level is a support-request categorization concept only, generated by simple rules — it is <strong>not</strong> a medical diagnosis or emergency medical assessment. For emergencies, contact your local emergency service.</p>
+            <button class="btn btn-outline btn-sm" id="newRequestBtn" type="button">Submit Another Request</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Past requests (localStorage) -->
+      <div class="past-requests" id="pastRequestsWrap" hidden>
+        <h3>Your Recent Requests (stored on this device)</h3>
+        <div class="past-requests-list" id="pastRequestsList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQS (static reference list, chatbot handles interactive Q&A) ============ -->
+  <section class="faqs" id="faqs">
+    <div class="section-inner">
+      <p class="eyebrow center">Frequently Asked Questions</p>
+      <h2 class="section-title">Common Questions</h2>
+      <p class="section-sub">Need a quicker answer? Ask <strong>CareBot 🤖</strong> using the chat icon in the bottom-right corner.</p>
+
+      <div class="faq-accordion" id="faqAccordion">
+        <!-- populated by JS from the shared FAQ knowledge base -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="section-inner about-grid">
+      <div>
+        <p class="eyebrow">Why CareConnect</p>
+        <h2 class="section-title left">Built for NGOs, Designed for People</h2>
+        <p class="about-lead">CareConnect is a concept platform designed to help NGOs organize healthcare support requests and connect people with appropriate assistance.</p>
+        <ul class="benefit-list">
+          <li><span aria-hidden="true">✓</span> Easier request collection</li>
+          <li><span aria-hidden="true">✓</span> Automated FAQ responses</li>
+          <li><span aria-hidden="true">✓</span> Request categorization</li>
+          <li><span aria-hidden="true">✓</span> Better volunteer coordination</li>
+          <li><span aria-hidden="true">✓</span> Improved accessibility</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <h3>For NGO Coordinators</h3>
+        <p>Every submitted request is automatically assigned a Request ID and priority level, so your team can triage incoming needs at a glance instead of sorting through unstructured messages.</p>
+        <div class="about-stats">
+          <div><strong>4</strong><span>Support categories</span></div>
+          <div><strong>24/7</strong><span>FAQ availability</span></div>
+          <div><strong>1</strong><span>Simple form</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="section-inner contact-grid">
+      <div>
+        <p class="eyebrow">Get in Touch</p>
+        <h2 class="section-title left">Contact CareConnect</h2>
+        <p class="section-sub left">This is demo contact information for the concept submission.</p>
+        <ul class="contact-details">
+          <li><span aria-hidden="true">✉️</span> hello@careconnect-demo.org</li>
+          <li><span aria-hidden="true">📞</span> +1 (555) 010-2024</li>
+          <li><span aria-hidden="true">📍</span> 12 Wellness Avenue, Springfield</li>
+        </ul>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-field">
+          <label for="cName">Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="cName" name="cName" required />
+        </div>
+        <div class="form-field">
+          <label for="cEmail">Email <span aria-hidden="true">*</span></label>
+          <input type="email" id="cEmail" name="cEmail" required />
+        </div>
+        <div class="form-field">
+          <label for="cMessage">Message <span aria-hidden="true">*</span></label>
+          <textarea id="cMessage" name="cMessage" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        <p class="contact-status" id="contactStatus" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="section-inner footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 24" width="30" height="18">
+          <polyline points="0,12 9,12 12,4 16,20 20,12 40,12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <div>
+        <div class="footer-name">CareConnect</div>
+        <p>Connecting people with care and support.</p>
+      </div>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#request">Request Support</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <p class="footer-note">Built as a concept-level healthcare support application.</p>
+</footer>
+
+<!-- ============ CAREBOT (Floating FAQ Chatbot) ============ -->
+<button class="carebot-fab" id="carebotFab" aria-haspopup="dialog" aria-expanded="false" aria-controls="carebotWindow" aria-label="Open CareBot assistant">
+  <span class="fab-icon">🤖</span>
+</button>
+
+<div class="carebot-window hidden" id="carebotWindow" role="dialog" aria-modal="false" aria-labelledby="carebotTitle">
+  <div class="carebot-header">
+    <div>
+      <div id="carebotTitle" class="carebot-title">CareBot 🤖</div>
+      <div class="carebot-subtitle">Automated FAQ assistant · concept</div>
+    </div>
+    <div class="carebot-header-actions">
+      <button type="button" id="carebotClear" title="Clear chat" aria-label="Clear chat">🗑️</button>
+      <button type="button" id="carebotClose" title="Close" aria-label="Close CareBot">✕</button>
+    </div>
+  </div>
+
+  <div class="carebot-messages" id="carebotMessages" aria-live="polite"></div>
+
+  <div class="carebot-typing hidden" id="carebotTyping">
+    <span></span><span></span><span></span>
+  </div>
+
+  <form class="carebot-input-row" id="carebotForm">
+    <label for="carebotInput" class="sr-only">Type your question</label>
+    <input type="text" id="carebotInput" placeholder="Ask CareBot a question…" autocomplete="off" />
+    <button type="submit" aria-label="Send message">➤</button>
+  </form>
+  <p class="carebot-disclaimer">CareBot uses predefined keyword matching — it is not connected to any external AI service and is not an emergency medical service.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
